@@ -300,6 +300,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="你的心上狗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edward*">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/15/web前端学习之javascript-DOM/" itemprop="url">web前端学习js-DOM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T19:28:42+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。"><a href="#DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。" class="headerlink" title="DOM是“Document Object Model”(文档对象模型)的首字母缩写。"></a>DOM是“Document Object Model”(文档对象模型)的首字母缩写。</h4><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><h4 id="元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】"><a href="#元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】" class="headerlink" title="元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】"></a>元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】</h4><h4 id="文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"><a href="#文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】" class="headerlink" title="文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"></a>文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】</h4><h4 id="属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】"><a href="#属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】" class="headerlink" title="属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】"></a>属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】</h4><hr>
+<h4 id="getElementById-方法-返回的是对象"><a href="#getElementById-方法-返回的是对象" class="headerlink" title="getElementById()方法 返回的是对象"></a>getElementById()方法 返回的是对象</h4><h5 id="document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”"><a href="#document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”" class="headerlink" title="document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)"></a>document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)</h5><h4 id="getElementsByTagName-方法-返回的是对象数组"><a href="#getElementsByTagName-方法-返回的是对象数组" class="headerlink" title="getElementsByTagName()方法 返回的是对象数组"></a>getElementsByTagName()方法 返回的是对象数组</h4><h5 id="getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”"><a href="#getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”" class="headerlink" title="getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)"></a>getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)</h5><h4 id="getAttribute-方法-查询属性-通过具体的对象调用"><a href="#getAttribute-方法-查询属性-通过具体的对象调用" class="headerlink" title="getAttribute()方法 查询属性 通过具体的对象调用"></a>getAttribute()方法 查询属性 通过具体的对象调用</h4><h5 id="object-getAttribute-attribute"><a href="#object-getAttribute-attribute" class="headerlink" title="object.getAttribute(attribute)"></a>object.getAttribute(attribute)</h5><h4 id="setAttribute-方法-设置属性"><a href="#setAttribute-方法-设置属性" class="headerlink" title="setAttribute()方法 设置属性"></a>setAttribute()方法 设置属性</h4><h5 id="object-setAttribute-attribute-value"><a href="#object-setAttribute-attribute-value" class="headerlink" title="object.setAttribute(attribute,value)"></a>object.setAttribute(attribute,value)</h5><hr>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/web前端学习之display-inline、block、inline-block的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -587,7 +730,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/post如何用i标签做小图标/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/web前端学习之post如何用i标签做小图标/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="你的心上狗">
@@ -606,7 +749,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/02/post如何用i标签做小图标/" itemprop="url">post如何用i标签做小图标</a></h1>
+                <a class="post-title-link" href="/2018/05/02/web前端学习之post如何用i标签做小图标/" itemprop="url">post如何用i标签做小图标</a></h1>
         
 
         <div class="post-meta">
@@ -730,7 +873,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/web前端学习文本属性/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/web前端学习之文本属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="你的心上狗">
@@ -749,7 +892,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/18/web前端学习文本属性/" itemprop="url">web前端学习文本属性</a></h1>
+                <a class="post-title-link" href="/2018/04/18/web前端学习之文本属性/" itemprop="url">web前端学习文本属性</a></h1>
         
 
         <div class="post-meta">
@@ -1354,7 +1497,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
