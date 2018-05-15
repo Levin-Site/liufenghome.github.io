@@ -300,6 +300,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/web前端学习之display-inline、block、inline-block的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="你的心上狗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edward*">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/15/web前端学习之display-inline、block、inline-block的区别/" itemprop="url">web前端学习之display:inline、block、inline-block的区别</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T17:00:28+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="display-inline、block、inline-block的区别"><a href="#display-inline、block、inline-block的区别" class="headerlink" title="display:inline、block、inline-block的区别"></a>display:inline、block、inline-block的区别</h4><h5 id="display-block就是将元素显示为块级元素"><a href="#display-block就是将元素显示为块级元素" class="headerlink" title="display:block就是将元素显示为块级元素."></a>display:block就是将元素显示为块级元素.</h5><p>　　block元素的特点是：<br>　　总是在新行上开始；<br>　　高度，行高以及顶和底边距都可控制；<br>　　宽度缺省是它的容器的100%，除非设定一个宽度<br>　　<div>, <p>, </p><h1>, <form>, <ul> 和 <li>是块元素的例子。</li></ul></form></h1></div></p>
+<h5 id="display-inline就是将元素显示为行内元素"><a href="#display-inline就是将元素显示为行内元素" class="headerlink" title="display:inline就是将元素显示为行内元素."></a>display:inline就是将元素显示为行内元素.</h5><p>　　inline元素的特点是：<br>　　和其他元素都在一行上；<br>　　高，行高及顶和底边距不可改变；<br>　　宽度就是它的文字或图片的宽度，不可改变。<br>　　<span>, <a>, <label>, <input>, <img>, <strong> 和<em>是inline元素的例子。<br>　　inline和block可以控制一个元素的行宽高等特性，需要切换的情况如下：<br>　　让一个inline元素从新行开始；<br>　　让块元素和其他元素保持在一行上；<br>　　控制inline元素的宽度（对导航条特别有用）；<br>　　控制inline元素的高度；<br>　　无须设定宽度即可为一个块元素设定与文字同宽的背景色。</em></strong></label></a></span></p>
+<h5 id="display-inline-block将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。"><a href="#display-inline-block将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。" class="headerlink" title="display:inline-block将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。"></a>display:inline-block将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。</h5><p>　　inline-block的元素特点：</p>
+<h2 id="将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。-准确地说，应用此特性的元素呈现为内联对象，周围元素保持在同一行，但可以设置宽度和高度地块元素的属性"><a href="#将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。-准确地说，应用此特性的元素呈现为内联对象，周围元素保持在同一行，但可以设置宽度和高度地块元素的属性" class="headerlink" title="　　将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。(准确地说，应用此特性的元素呈现为内联对象，周围元素保持在同一行，但可以设置宽度和高度地块元素的属性)"></a>　　将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。(准确地说，应用此特性的元素呈现为内联对象，周围元素保持在同一行，但可以设置宽度和高度地块元素的属性)</h2><p>　　并不是所有浏览器都支持此属性，目前支持的浏览器有：Opera、Safari在IE中对内联元素使用display:inline-block，IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表症。从上面的这个分析，也不难理解为什么IE下，对块元素设置display:inline-block属性无法实现inline-block的效果。这时块元素仅仅是被display:inline-block触发了layout，而它本就是行布局，所以触发后，块元素依然还是行布局，而不会如Opera中块元素呈递为内联对象。<br>　　IE下块元素如何实现display:inline-block的效果？<br>　　有两种方法：<br>　　1、先使用display:inline-block属性触发块元素，然后再定义display:inline，让块元素呈递为内联对象（两个display要先后放在两个CSS声明中才有效果，这是IE的一个经典bug，如果先定义了display:inline-block，然后再将display设回inline或block，layout不会消失）。代码如下（…为省略的其他属性内容）：<br>　　div {display:inline-block;…}<br>　　div {display:inline;}<br>　　2、直接让块元素设置为内联对象呈递（设置属性display:inline），然后触发块元素的layout（如：zoom:1等）。代码如下：</p>
+<h2 id="div-display-inline-zoom-1-…"><a href="#div-display-inline-zoom-1-…" class="headerlink" title="　　div {display:inline; zoom:1;…}"></a>　　div {display:inline; zoom:1;…}</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/web前端学习之简单商品列表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1211,7 +1356,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
