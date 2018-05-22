@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo,github,npm,基础," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="DOMDOM是“Document Object Model”(文档对象模型)的首字母缩写。节点元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】属性节点（attribute node）：属性节点总是被放在起始标签里">
-<meta name="keywords" content="hexo,github,npm,基础">
+<meta name="description" content="Object实例的两种方式Js代码var person = new Object();   person.name = &amp;quot;Miles&amp;quot;;   person.age = 24;   Js代码var person = {           name: &amp;quot;Miles&amp;quot;,       age: 24   }   第二种方法中，属性么也可以是字符串，效果一样Js代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web前端学习js-DOM">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/index.html">
+<meta property="og:title" content="web前端学习之js读书笔记二">
+<meta property="og:url" content="http://yoursite.com/2018/05/22/web前端学习之js读书笔记二/index.html">
 <meta property="og:site_name" content="Edward*">
-<meta property="og:description" content="DOMDOM是“Document Object Model”(文档对象模型)的首字母缩写。节点元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】属性节点（attribute node）：属性节点总是被放在起始标签里">
+<meta property="og:description" content="Object实例的两种方式Js代码var person = new Object();   person.name = &amp;quot;Miles&amp;quot;;   person.age = 24;   Js代码var person = {           name: &amp;quot;Miles&amp;quot;,       age: 24   }   第二种方法中，属性么也可以是字符串，效果一样Js代码">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T11:32:37.470Z">
+<meta property="og:updated_time" content="2018-05-22T07:24:54.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="web前端学习js-DOM">
-<meta name="twitter:description" content="DOMDOM是“Document Object Model”(文档对象模型)的首字母缩写。节点元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】属性节点（attribute node）：属性节点总是被放在起始标签里">
+<meta name="twitter:title" content="web前端学习之js读书笔记二">
+<meta name="twitter:description" content="Object实例的两种方式Js代码var person = new Object();   person.name = &amp;quot;Miles&amp;quot;;   person.age = 24;   Js代码var person = {           name: &amp;quot;Miles&amp;quot;,       age: 24   }   第二种方法中，属性么也可以是字符串，效果一样Js代码">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/22/web前端学习之js读书笔记二/"/>
 
 
 
 
 
-  <title>web前端学习js-DOM | Edward*</title>
+  <title>web前端学习之js读书笔记二 | Edward*</title>
   
 
 
@@ -304,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/22/web前端学习之js读书笔记二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="你的心上狗">
@@ -321,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">web前端学习js-DOM</h1>
+          <h1 class="post-title" itemprop="name headline">web前端学习之js读书笔记二</h1>
         
 
         <div class="post-meta">
@@ -333,8 +332,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T19:28:42+08:00">
-                2018-05-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-22T15:21:39+08:00">
+                2018-05-22
               </time>
             
 
@@ -343,28 +342,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -393,9 +370,28 @@
       
 
       
-        <h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。"><a href="#DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。" class="headerlink" title="DOM是“Document Object Model”(文档对象模型)的首字母缩写。"></a>DOM是“Document Object Model”(文档对象模型)的首字母缩写。</h4><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><h4 id="元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】"><a href="#元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】" class="headerlink" title="元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】"></a>元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】</h4><h4 id="文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"><a href="#文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】" class="headerlink" title="文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"></a>文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】</h4><h4 id="属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】"><a href="#属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】" class="headerlink" title="属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】"></a>属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】</h4><hr>
-<h4 id="getElementById-方法-返回的是对象"><a href="#getElementById-方法-返回的是对象" class="headerlink" title="getElementById()方法 返回的是对象"></a>getElementById()方法 返回的是对象</h4><h5 id="document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”"><a href="#document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”" class="headerlink" title="document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)"></a>document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)</h5><h4 id="getElementsByTagName-方法-返回的是对象数组"><a href="#getElementsByTagName-方法-返回的是对象数组" class="headerlink" title="getElementsByTagName()方法 返回的是对象数组"></a>getElementsByTagName()方法 返回的是对象数组</h4><h5 id="getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”"><a href="#getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”" class="headerlink" title="getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)"></a>getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)</h5><h4 id="getAttribute-方法-查询属性-通过具体的对象调用"><a href="#getAttribute-方法-查询属性-通过具体的对象调用" class="headerlink" title="getAttribute()方法 查询属性 通过具体的对象调用"></a>getAttribute()方法 查询属性 通过具体的对象调用</h4><h5 id="object-getAttribute-attribute"><a href="#object-getAttribute-attribute" class="headerlink" title="object.getAttribute(attribute)"></a>object.getAttribute(attribute)</h5><h4 id="setAttribute-方法-设置属性"><a href="#setAttribute-方法-设置属性" class="headerlink" title="setAttribute()方法 设置属性"></a>setAttribute()方法 设置属性</h4><h5 id="object-setAttribute-attribute-value"><a href="#object-setAttribute-attribute-value" class="headerlink" title="object.setAttribute(attribute,value)"></a>object.setAttribute(attribute,value)</h5><hr>
-
+        <h3 id="Object实例的两种方式"><a href="#Object实例的两种方式" class="headerlink" title="Object实例的两种方式"></a>Object实例的两种方式</h3><h5 id="Js代码"><a href="#Js代码" class="headerlink" title="Js代码"></a>Js代码</h5><pre><code>var person = new Object();  
+person.name = &quot;Miles&quot;;  
+person.age = 24;  
+</code></pre><h5 id="Js代码-1"><a href="#Js代码-1" class="headerlink" title="Js代码"></a>Js代码</h5><pre><code>var person = {      
+    name: &quot;Miles&quot;,  
+    age: 24  
+}  
+</code></pre><h4 id="第二种方法中，属性么也可以是字符串，效果一样"><a href="#第二种方法中，属性么也可以是字符串，效果一样" class="headerlink" title="第二种方法中，属性么也可以是字符串，效果一样"></a>第二种方法中，属性么也可以是字符串，效果一样</h4><h5 id="Js代码-2"><a href="#Js代码-2" class="headerlink" title="Js代码"></a>Js代码</h5><pre><code>var person = {}; //与 new Object() 相同  
+person.name = &quot;Miles&quot;;  
+person.age = 24;  
+</code></pre><h4 id="访问对象时可以使用以下两种方法"><a href="#访问对象时可以使用以下两种方法" class="headerlink" title="访问对象时可以使用以下两种方法"></a>访问对象时可以使用以下两种方法</h4><h5 id="Js代码-3"><a href="#Js代码-3" class="headerlink" title="Js代码"></a>Js代码</h5><pre><code>alert(person.name);  
+alert(person[&quot;name&quot;]);  
+//方括号的优点是可以通过变了来访问属性  
+var propertyName = &quot;name&quot;;  
+alert(person[propertyName]);  
+</code></pre><h4 id="创建数组的基本方式有两种。第一种是使用Array构造函数"><a href="#创建数组的基本方式有两种。第一种是使用Array构造函数" class="headerlink" title="创建数组的基本方式有两种。第一种是使用Array构造函数"></a>创建数组的基本方式有两种。第一种是使用Array构造函数</h4><h5 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h5><pre><code>var colors = new Array();  
+var types = new Array(20); //因为传递的是数值，则会创建一个包含给定数值20个项的数组，每一项的初始值都是undefined，  
+</code></pre><h4 id="也可以向Array构造函数传递数组中应该包含的项"><a href="#也可以向Array构造函数传递数组中应该包含的项" class="headerlink" title="也可以向Array构造函数传递数组中应该包含的项"></a>也可以向Array构造函数传递数组中应该包含的项</h4><h5 id="Js代码-4"><a href="#Js代码-4" class="headerlink" title="Js代码"></a>Js代码</h5><pre><code>var colors = new Array(&quot;red,&quot; &quot;green&quot;, &quot;blue&quot;);  
+</code></pre><h4 id="在使用Array构造函数时，也可以省略new操作符"><a href="#在使用Array构造函数时，也可以省略new操作符" class="headerlink" title="在使用Array构造函数时，也可以省略new操作符"></a>在使用Array构造函数时，也可以省略new操作符</h4><h4 id="第二种基本方式是使用数组字面量表示法"><a href="#第二种基本方式是使用数组字面量表示法" class="headerlink" title="第二种基本方式是使用数组字面量表示法"></a>第二种基本方式是使用数组字面量表示法</h4><h5 id="Js代码-5"><a href="#Js代码-5" class="headerlink" title="Js代码"></a>Js代码</h5><pre><code>var colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];  
+colors.length = 2; //将其length属性设置为2会移除最后一项，如果将其length属性设置为大于数组项数的值，则新增的每一项都会去的undefined值  
+var name= []; //创建一个空数组  
+</code></pre>
       
     </div>
     
@@ -410,18 +406,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-            <a href="/tags/github/" rel="tag"># github</a>
-          
-            <a href="/tags/npm/" rel="tag"># npm</a>
-          
-            <a href="/tags/基础/" rel="tag"># 基础</a>
-          
-        </div>
-      
 
       
       
@@ -431,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/15/web前端学习之display-inline、block、inline-block的区别/" rel="next" title="web前端学习之display:inline、block、inline-block的区别">
-                <i class="fa fa-chevron-left"></i> web前端学习之display:inline、block、inline-block的区别
+              <a href="/2018/05/22/web前端学习之js读书笔记一/" rel="next" title="web前端学习之js读书笔记一">
+                <i class="fa fa-chevron-left"></i> web前端学习之js读书笔记一
               </a>
             
           </div>
@@ -440,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/22/web前端学习之js读书笔记一/" rel="prev" title="web前端学习之js读书笔记一">
-                web前端学习之js读书笔记一 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -579,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。"><span class="nav-number">1.1.</span> <span class="nav-text">DOM是“Document Object Model”(文档对象模型)的首字母缩写。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点"><span class="nav-number">2.</span> <span class="nav-text">节点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】"><span class="nav-number">2.1.</span> <span class="nav-text">元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"><span class="nav-number">2.2.</span> <span class="nav-text">文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】"><span class="nav-number">2.3.</span> <span class="nav-text">属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getElementById-方法-返回的是对象"><span class="nav-number">2.4.</span> <span class="nav-text">getElementById()方法 返回的是对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”"><span class="nav-number">2.4.1.</span> <span class="nav-text">document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getElementsByTagName-方法-返回的是对象数组"><span class="nav-number">2.5.</span> <span class="nav-text">getElementsByTagName()方法 返回的是对象数组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”"><span class="nav-number">2.5.1.</span> <span class="nav-text">getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getAttribute-方法-查询属性-通过具体的对象调用"><span class="nav-number">2.6.</span> <span class="nav-text">getAttribute()方法 查询属性 通过具体的对象调用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#object-getAttribute-attribute"><span class="nav-number">2.6.1.</span> <span class="nav-text">object.getAttribute(attribute)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setAttribute-方法-设置属性"><span class="nav-number">2.7.</span> <span class="nav-text">setAttribute()方法 设置属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#object-setAttribute-attribute-value"><span class="nav-number">2.7.1.</span> <span class="nav-text">object.setAttribute(attribute,value)</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object实例的两种方式"><span class="nav-number">1.</span> <span class="nav-text">Object实例的两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Js代码"><span class="nav-number">1.0.1.</span> <span class="nav-text">Js代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Js代码-1"><span class="nav-number">1.0.2.</span> <span class="nav-text">Js代码</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二种方法中，属性么也可以是字符串，效果一样"><span class="nav-number">1.1.</span> <span class="nav-text">第二种方法中，属性么也可以是字符串，效果一样</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Js代码-2"><span class="nav-number">1.1.1.</span> <span class="nav-text">Js代码</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#访问对象时可以使用以下两种方法"><span class="nav-number">1.2.</span> <span class="nav-text">访问对象时可以使用以下两种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Js代码-3"><span class="nav-number">1.2.1.</span> <span class="nav-text">Js代码</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建数组的基本方式有两种。第一种是使用Array构造函数"><span class="nav-number">1.3.</span> <span class="nav-text">创建数组的基本方式有两种。第一种是使用Array构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Java代码"><span class="nav-number">1.3.1.</span> <span class="nav-text">Java代码</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#也可以向Array构造函数传递数组中应该包含的项"><span class="nav-number">1.4.</span> <span class="nav-text">也可以向Array构造函数传递数组中应该包含的项</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Js代码-4"><span class="nav-number">1.4.1.</span> <span class="nav-text">Js代码</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在使用Array构造函数时，也可以省略new操作符"><span class="nav-number">1.5.</span> <span class="nav-text">在使用Array构造函数时，也可以省略new操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二种基本方式是使用数组字面量表示法"><span class="nav-number">1.6.</span> <span class="nav-text">第二种基本方式是使用数组字面量表示法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Js代码-5"><span class="nav-number">1.6.1.</span> <span class="nav-text">Js代码</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
