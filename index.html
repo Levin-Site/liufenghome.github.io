@@ -398,8 +398,9 @@
           
             <p>加载图片资源不能使用相对路径<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'../../../static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
 <p>或者<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'@/static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
-<p>此两种导入方式都会使得图片资源无法正常加载，只需要用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'/static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
-<h2 id="替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。"><a href="#替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。" class="headerlink" title="替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。"></a>替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。</h2>
+<p>此两种导入方式都会使得图片资源无法正常加载，只需要以下代码替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'/static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
+<hr>
+
           
         
       

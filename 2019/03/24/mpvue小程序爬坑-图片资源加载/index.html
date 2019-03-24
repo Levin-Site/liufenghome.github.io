@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="加载图片资源不能使用相对路径1&apos;../../../static/img/xxx.png&apos; 或者1&apos;@/static/img/xxx.png&apos; 此两种导入方式都会使得图片资源无法正常加载，只需要用1&apos;/static/img/xxx.png&apos; 替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。">
+<meta name="description" content="加载图片资源不能使用相对路径1&apos;../../../static/img/xxx.png&apos; 或者1&apos;@/static/img/xxx.png&apos; 此两种导入方式都会使得图片资源无法正常加载，只需要以下代码替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。1&apos;/static/img/xxx.png&apos;">
 <meta name="keywords" content="小程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mpvue小程序爬坑--图片资源加载">
 <meta property="og:url" content="http://yoursite.com/2019/03/24/mpvue小程序爬坑-图片资源加载/index.html">
 <meta property="og:site_name" content="Fengziya*">
-<meta property="og:description" content="加载图片资源不能使用相对路径1&apos;../../../static/img/xxx.png&apos; 或者1&apos;@/static/img/xxx.png&apos; 此两种导入方式都会使得图片资源无法正常加载，只需要用1&apos;/static/img/xxx.png&apos; 替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。">
+<meta property="og:description" content="加载图片资源不能使用相对路径1&apos;../../../static/img/xxx.png&apos; 或者1&apos;@/static/img/xxx.png&apos; 此两种导入方式都会使得图片资源无法正常加载，只需要以下代码替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。1&apos;/static/img/xxx.png&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-24T05:48:22.789Z">
+<meta property="og:updated_time" content="2019-03-24T05:50:52.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mpvue小程序爬坑--图片资源加载">
-<meta name="twitter:description" content="加载图片资源不能使用相对路径1&apos;../../../static/img/xxx.png&apos; 或者1&apos;@/static/img/xxx.png&apos; 此两种导入方式都会使得图片资源无法正常加载，只需要用1&apos;/static/img/xxx.png&apos; 替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。">
+<meta name="twitter:description" content="加载图片资源不能使用相对路径1&apos;../../../static/img/xxx.png&apos; 或者1&apos;@/static/img/xxx.png&apos; 此两种导入方式都会使得图片资源无法正常加载，只需要以下代码替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。1&apos;/static/img/xxx.png&apos;">
 
 
 
@@ -395,8 +395,9 @@
       
         <p>加载图片资源不能使用相对路径<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'../../../static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
 <p>或者<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'@/static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
-<p>此两种导入方式都会使得图片资源无法正常加载，只需要用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'/static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
-<h2 id="替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。"><a href="#替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。" class="headerlink" title="替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。"></a>替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。</h2>
+<p>此两种导入方式都会使得图片资源无法正常加载，只需要以下代码替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'/static/img/xxx.png'</span><br></pre></td></tr></table></figure></p>
+<hr>
+
       
     </div>
     
@@ -486,17 +487,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -560,22 +552,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。"><span class="nav-number">1.</span> <span class="nav-text">替换即可，因为static本来就是专门放静态资源文件的，存放在根目录下，所以没必要使用相对路径和绝对路径。</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
