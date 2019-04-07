@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="DOMDOM是“Document Object Model”(文档对象模型)的首字母缩写。节点元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】属性节点（attribute node）：属性节点总是被放在起始标签里">
+<meta name="description" content="for和let的区别举例 let 配合for循环的独特应用let非常适合用于 for循环内部的块级作用域。JS中的for循环体比较特殊，每次执行都是一个全新的独立的块作用域，用let声明的变量传入到 for循环体的作用域后，不会发生改变，不受外界的影响。看一个常见的面试题目12345678for (var i = 0; i &amp;lt;10; i++) &amp;#123;    setTimeout(fun">
 <meta name="keywords" content="hexo,github,npm,js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web前端学习js-DOM">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/index.html">
+<meta property="og:title" content="for和let的区别举例">
+<meta property="og:url" content="http://yoursite.com/2019/04/07/for和let的区别举例/index.html">
 <meta property="og:site_name" content="Fengziya*">
-<meta property="og:description" content="DOMDOM是“Document Object Model”(文档对象模型)的首字母缩写。节点元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】属性节点（attribute node）：属性节点总是被放在起始标签里">
+<meta property="og:description" content="for和let的区别举例 let 配合for循环的独特应用let非常适合用于 for循环内部的块级作用域。JS中的for循环体比较特殊，每次执行都是一个全新的独立的块作用域，用let声明的变量传入到 for循环体的作用域后，不会发生改变，不受外界的影响。看一个常见的面试题目12345678for (var i = 0; i &amp;lt;10; i++) &amp;#123;    setTimeout(fun">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-07T09:37:24.264Z">
+<meta property="og:updated_time" content="2019-04-07T09:51:40.191Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="web前端学习js-DOM">
-<meta name="twitter:description" content="DOMDOM是“Document Object Model”(文档对象模型)的首字母缩写。节点元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】属性节点（attribute node）：属性节点总是被放在起始标签里">
+<meta name="twitter:title" content="for和let的区别举例">
+<meta name="twitter:description" content="for和let的区别举例 let 配合for循环的独特应用let非常适合用于 for循环内部的块级作用域。JS中的for循环体比较特殊，每次执行都是一个全新的独立的块作用域，用let声明的变量传入到 for循环体的作用域后，不会发生改变，不受外界的影响。看一个常见的面试题目12345678for (var i = 0; i &amp;lt;10; i++) &amp;#123;    setTimeout(fun">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/07/for和let的区别举例/"/>
 
 
 
 
 
-  <title>web前端学习js-DOM | Fengziya*</title>
+  <title>for和let的区别举例 | Fengziya*</title>
   
 
 
@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/07/for和let的区别举例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LF">
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">web前端学习js-DOM</h1>
+          <h1 class="post-title" itemprop="name headline">for和let的区别举例</h1>
         
 
         <div class="post-meta">
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T19:28:42+08:00">
-                2018-05-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-07T17:35:33+08:00">
+                2019-04-07
               </time>
             
 
@@ -393,8 +393,19 @@
       
 
       
-        <h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。"><a href="#DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。" class="headerlink" title="DOM是“Document Object Model”(文档对象模型)的首字母缩写。"></a>DOM是“Document Object Model”(文档对象模型)的首字母缩写。</h4><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><h4 id="元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】"><a href="#元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】" class="headerlink" title="元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】"></a>元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】</h4><h4 id="文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"><a href="#文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】" class="headerlink" title="文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"></a>文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】</h4><h4 id="属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】"><a href="#属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】" class="headerlink" title="属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】"></a>属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】</h4><hr>
-<h4 id="getElementById-方法-返回的是对象"><a href="#getElementById-方法-返回的是对象" class="headerlink" title="getElementById()方法 返回的是对象"></a>getElementById()方法 返回的是对象</h4><h5 id="document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”"><a href="#document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”" class="headerlink" title="document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)"></a>document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)</h5><h4 id="getElementsByTagName-方法-返回的是对象数组"><a href="#getElementsByTagName-方法-返回的是对象数组" class="headerlink" title="getElementsByTagName()方法 返回的是对象数组"></a>getElementsByTagName()方法 返回的是对象数组</h4><h5 id="getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”"><a href="#getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”" class="headerlink" title="getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)"></a>getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)</h5><h4 id="getAttribute-方法-查询属性-通过具体的对象调用"><a href="#getAttribute-方法-查询属性-通过具体的对象调用" class="headerlink" title="getAttribute()方法 查询属性 通过具体的对象调用"></a>getAttribute()方法 查询属性 通过具体的对象调用</h4><h5 id="object-getAttribute-attribute"><a href="#object-getAttribute-attribute" class="headerlink" title="object.getAttribute(attribute)"></a>object.getAttribute(attribute)</h5><h4 id="setAttribute-方法-设置属性"><a href="#setAttribute-方法-设置属性" class="headerlink" title="setAttribute()方法 设置属性"></a>setAttribute()方法 设置属性</h4><h5 id="object-setAttribute-attribute-value"><a href="#object-setAttribute-attribute-value" class="headerlink" title="object.setAttribute(attribute,value)"></a>object.setAttribute(attribute,value)</h5><hr>
+        <h1 id="for和let的区别举例"><a href="#for和let的区别举例" class="headerlink" title="for和let的区别举例"></a>for和let的区别举例</h1><hr>
+<h2 id="let-配合for循环的独特应用"><a href="#let-配合for循环的独特应用" class="headerlink" title="let 配合for循环的独特应用"></a>let 配合for循环的独特应用</h2><p>let非常适合用于 for循环内部的块级作用域。JS中的for循环体比较特殊，每次执行都是一个全新的独立的块作用域，用let声明的变量传入到 for循环体的作用域后，不会发生改变，不受外界的影响。看一个常见的面试题目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt;10; i++) &#123;  </span><br><span class="line">  setTimeout(function() &#123;  // 同步注册回调函数到 异步的 宏任务队列。</span><br><span class="line">    console.log(i);        // 执行此代码时，同步代码for循环已经执行完成</span><br><span class="line">  &#125;, 0);</span><br><span class="line">&#125;</span><br><span class="line">// 输出结果</span><br><span class="line">10   共10个</span><br><span class="line">// 这里面的知识点： JS的事件循环机制，setTimeout的机制等</span><br></pre></td></tr></table></figure></p>
+<p>如果把 var改成 let声明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// i虽然在全局作用域声明，但是在for循环体局部作用域中使用的时候，变量会被固定，不受外界干扰。</span><br><span class="line">for (let i = 0; i &lt; 10; i++) &#123; </span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">    console.log(i);    //  i 是循环体内局部作用域，不受外界影响。</span><br><span class="line">  &#125;, 0);</span><br><span class="line">&#125;</span><br><span class="line">// 输出结果：</span><br><span class="line">0  1  2  3  4  5  6  7  8 9</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="异步类型"><a href="#异步类型" class="headerlink" title="异步类型"></a>异步类型</h2><p>一般而言，异步任务有以下三种类型</p>
+<blockquote>
+<ul>
+<li>普通事件，如click、resize等</li>
+<li>资源加载，如load、error等</li>
+<li>定时器，包括setInterval、setTimeout等</li>
+</ul>
+</blockquote>
+<hr>
 
       
     </div>
@@ -431,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/15/web前端学习之display-inline、block、inline-block的区别/" rel="next" title="web前端学习之display:inline、block、inline-block的区别">
-                <i class="fa fa-chevron-left"></i> web前端学习之display:inline、block、inline-block的区别
+              <a href="/2019/03/24/mpvue小程序爬坑-图片资源加载/" rel="next" title="mpvue小程序爬坑--图片资源加载">
+                <i class="fa fa-chevron-left"></i> mpvue小程序爬坑--图片资源加载
               </a>
             
           </div>
@@ -440,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/22/web前端学习之js读书笔记一/" rel="prev" title="web前端学习之js读书笔记一">
-                web前端学习之js读书笔记一 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -579,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。"><span class="nav-number">1.1.</span> <span class="nav-text">DOM是“Document Object Model”(文档对象模型)的首字母缩写。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点"><span class="nav-number">2.</span> <span class="nav-text">节点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】"><span class="nav-number">2.1.</span> <span class="nav-text">元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"><span class="nav-number">2.2.</span> <span class="nav-text">文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】"><span class="nav-number">2.3.</span> <span class="nav-text">属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getElementById-方法-返回的是对象"><span class="nav-number">2.4.</span> <span class="nav-text">getElementById()方法 返回的是对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”"><span class="nav-number">2.4.1.</span> <span class="nav-text">document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getElementsByTagName-方法-返回的是对象数组"><span class="nav-number">2.5.</span> <span class="nav-text">getElementsByTagName()方法 返回的是对象数组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”"><span class="nav-number">2.5.1.</span> <span class="nav-text">getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getAttribute-方法-查询属性-通过具体的对象调用"><span class="nav-number">2.6.</span> <span class="nav-text">getAttribute()方法 查询属性 通过具体的对象调用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#object-getAttribute-attribute"><span class="nav-number">2.6.1.</span> <span class="nav-text">object.getAttribute(attribute)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setAttribute-方法-设置属性"><span class="nav-number">2.7.</span> <span class="nav-text">setAttribute()方法 设置属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#object-setAttribute-attribute-value"><span class="nav-number">2.7.1.</span> <span class="nav-text">object.setAttribute(attribute,value)</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#for和let的区别举例"><span class="nav-number">1.</span> <span class="nav-text">for和let的区别举例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#let-配合for循环的独特应用"><span class="nav-number">1.1.</span> <span class="nav-text">let 配合for循环的独特应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步类型"><span class="nav-number">1.2.</span> <span class="nav-text">异步类型</span></a></li></ol></li></ol></div>
             
 
           </div>
