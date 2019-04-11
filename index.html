@@ -303,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/07/for和let的区别举例/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/07/var和let的区别举例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LF">
@@ -322,7 +322,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/07/for和let的区别举例/" itemprop="url">for和let的区别举例</a></h1>
+                <a class="post-title-link" href="/2019/04/07/var和let的区别举例/" itemprop="url">for和let的区别举例</a></h1>
         
 
         <div class="post-meta">
@@ -396,7 +396,7 @@
       
         
           
-            <h1 id="for和let的区别举例"><a href="#for和let的区别举例" class="headerlink" title="for和let的区别举例"></a>for和let的区别举例</h1><hr>
+            <h1 id="var和let的区别举例"><a href="#var和let的区别举例" class="headerlink" title="var和let的区别举例"></a>var和let的区别举例</h1><hr>
 <h2 id="let-配合for循环的独特应用"><a href="#let-配合for循环的独特应用" class="headerlink" title="let 配合for循环的独特应用"></a>let 配合for循环的独特应用</h2><p>let非常适合用于 for循环内部的块级作用域。JS中的for循环体比较特殊，每次执行都是一个全新的独立的块作用域，用let声明的变量传入到 for循环体的作用域后，不会发生改变，不受外界的影响。看一个常见的面试题目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt;10; i++) &#123;  </span><br><span class="line">  setTimeout(function() &#123;  // 同步注册回调函数到 异步的 宏任务队列。</span><br><span class="line">    console.log(i);        // 执行此代码时，同步代码for循环已经执行完成</span><br><span class="line">  &#125;, 0);</span><br><span class="line">&#125;</span><br><span class="line">// 输出结果</span><br><span class="line">10   共10个</span><br><span class="line">// 这里面的知识点： JS的事件循环机制，setTimeout的机制等</span><br></pre></td></tr></table></figure></p>
 <p>如果把 var改成 let声明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// i虽然在全局作用域声明，但是在for循环体局部作用域中使用的时候，变量会被固定，不受外界干扰。</span><br><span class="line">for (let i = 0; i &lt; 10; i++) &#123; </span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">    console.log(i);    //  i 是循环体内局部作用域，不受外界影响。</span><br><span class="line">  &#125;, 0);</span><br><span class="line">&#125;</span><br><span class="line">// 输出结果：</span><br><span class="line">0  1  2  3  4  5  6  7  8 9</span><br></pre></td></tr></table></figure></p>
 <hr>
