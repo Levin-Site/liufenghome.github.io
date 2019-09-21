@@ -303,6 +303,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/21/对js中event（事件对象）的理解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LF">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fengziya*">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/21/对js中event（事件对象）的理解/" itemprop="url">对js中event（事件对象）的理解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-21T19:14:17+08:00">
+                2019-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="对js中event（事件对象的理解）"><a href="#对js中event（事件对象的理解）" class="headerlink" title="对js中event（事件对象的理解）"></a>对js中event（事件对象的理解）</h1><h2 id="1、事件对象"><a href="#1、事件对象" class="headerlink" title="1、事件对象"></a>1、事件对象</h2><p>Event对象代表时间的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态等。</p>
+<ul>
+<li>一般什么时候会产生event对象呢？<ul>
+<li>例如当用户点击每个元素时，我们给这个元素注册的事件就会触发，该事件的本质就是一个函数，而该函数的形参接受一个event对象。</li>
+</ul>
+</li>
+<li>事件通常结合函数使用，函数不会在事件发生前被执行。</li>
+<li>例如</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</span><br><span class="line">oDiv.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、事件流"><a href="#2、事件流" class="headerlink" title="2、事件流"></a>2、事件流</h2><h3 id="2-1、事件冒泡（由下到上）"><a href="#2-1、事件冒泡（由下到上）" class="headerlink" title="2.1、事件冒泡（由下到上）"></a>2.1、事件冒泡（由下到上）</h3><p>意思就是说,假如用户单击了一个元素,该元素拥有一个click事件,那么同样的事件也将会被它的祖先触发,这个事件从该元素开始一直冒泡到DOM树的最上层,这一过程称为事件冒泡。</p>
+<h3 id="2-2、事件捕获（由上到下）"><a href="#2-2、事件捕获（由上到下）" class="headerlink" title="2.2、事件捕获（由上到下）"></a>2.2、事件捕获（由上到下）</h3><p>事件捕获和事件冒泡是相反的,也就是说,当用户触发了一个事件的时候,这个事件是从DOM树的最上层开始触发一直到捕获到事件源。</p>
+<h3 id="2-3、事件流的写法及实现方法"><a href="#2-3、事件流的写法及实现方法" class="headerlink" title="2.3、事件流的写法及实现方法"></a>2.3、事件流的写法及实现方法</h3><ul>
+<li>标准实现方式使用关键词addEventListener,假如你想要给某一个元素添加事件,现在就可以这样写element.addEventListener(eventType, fn, false)<ul>
+<li>dom对象.addEventListener(事件类型, 回调函数, 事件机制)这里的事件类型表示你要使用哪种事件类型比如click, 回调函数里面写着触发此事件你要做什么事情, 事件机制分为冒泡和捕获,如果为false表示事件冒泡,为true表示事件捕获。</li>
+</ul>
+</li>
+<li>IE写法<ul>
+<li>dom对象.attachEvent(eventType, fn)第一个参数表示事件类型,第二个是回调.这种写法兼容IE, IE没有实现事件捕获。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3、关于event对象"><a href="#3、关于event对象" class="headerlink" title="3、关于event对象"></a>3、关于event对象</h2><p>在触发的事件的函数里面我们会接收到一个event对象,通过该对象我们需要的一些参数,比如说我们需要知道此事件作用到谁身上了,就可以通过event的属性target来获取到(IE暂且不谈),或者想阻止浏览器的默认行为可以通过方法preventDefault()来进行阻止。</p>
+<h2 id="4、event对象的一些兼容性写法"><a href="#4、event对象的一些兼容性写法" class="headerlink" title="4、event对象的一些兼容性写法"></a>4、event对象的一些兼容性写法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">获得event对象兼容性写法 </span><br><span class="line">event || (event = <span class="built_in">window</span>.event);</span><br><span class="line">获得target兼容型写法 </span><br><span class="line">event.target||event.srcElement</span><br><span class="line">阻止浏览器默认行为兼容性写法 </span><br><span class="line">event.preventDefault ? event.preventDefault() : (event.returnValue = <span class="literal">false</span>);</span><br><span class="line">阻止冒泡写法 </span><br><span class="line">event.stopPropagation ? event.stopPropagation() : (event.cancelBubble = <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+<p>事件绑定和取消事件绑定的写法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//事件绑定</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">on</span>(<span class="params">dom, eventType, fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(dom.addEventListener) &#123;</span><br><span class="line">        dom.addEventListener(eventType, fn);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(dom.attachEvent) &#123;</span><br><span class="line">            dom.attachEvent(<span class="string">'on'</span> + eventType, fn);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//取消事件绑定</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">un</span>(<span class="params">dom, eventType, fn</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(dom.removeEventListener) &#123;</span><br><span class="line">         dom.removeEventListener(eventType, fn, <span class="literal">false</span>);</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         <span class="keyword">if</span>(dom.detachEvent) &#123;</span><br><span class="line">             dom.detachEvent(<span class="string">"on"</span> + eventType, fn)</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="5、事件冒泡和事件捕获demo"><a href="#5、事件冒泡和事件捕获demo" class="headerlink" title="5、事件冒泡和事件捕获demo"></a>5、事件冒泡和事件捕获demo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;bubble event&lt;/title&gt;</span><br><span class="line">    &lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">        body&#123;margin:0;&#125;</span><br><span class="line">        #one&#123;</span><br><span class="line">               width:500px;</span><br><span class="line">               height:500px;</span><br><span class="line">            background:rgb(255,0,0);</span><br><span class="line">               border: 1px solid transparent;</span><br><span class="line">        &#125;</span><br><span class="line">        #two&#123;</span><br><span class="line">            width:400px;</span><br><span class="line">            height:400px;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            margin-top: 50px;</span><br><span class="line">            background:rgb(255,50,50);</span><br><span class="line">            border: 1px solid transparent;</span><br><span class="line">        &#125;</span><br><span class="line">        #three&#123;</span><br><span class="line">            width:300px;</span><br><span class="line">               height:300px;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            margin-top: 50px;</span><br><span class="line">               background:rgb(255,100,100);</span><br><span class="line">            border: 1px solid transparent;</span><br><span class="line">        &#125;</span><br><span class="line">        #four&#123;</span><br><span class="line">            width:200px;</span><br><span class="line">               height:200px;</span><br><span class="line">               margin: 0 auto;</span><br><span class="line">            margin-top: 50px;</span><br><span class="line">            background:rgb(255,150,150);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&apos;one&apos;&gt;</span><br><span class="line">      &lt;div id=&apos;two&apos;&gt;</span><br><span class="line">        &lt;div id=&apos;three&apos;&gt;</span><br><span class="line">         &lt;div id=&apos;four&apos;&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var one = document.getElementById(&apos;one&apos;);</span><br><span class="line">        var two = document.getElementById(&apos;two&apos;);</span><br><span class="line">        var three = document.getElementById(&apos;three&apos;);</span><br><span class="line">        var four = document.getElementById(&apos;four&apos;);</span><br><span class="line"></span><br><span class="line">       var useCapture = false; //false为冒泡获取【目标元素先触发】    true为捕获获取【父级元素先触发】</span><br><span class="line">        one.addEventListener(&apos;click&apos;, function(event) &#123;</span><br><span class="line">            event || (event = window.event);</span><br><span class="line">            console.log(event);</span><br><span class="line">           console.log(&apos;one&apos;);</span><br><span class="line">        &#125;, useCapture);</span><br><span class="line">        two.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">            console.log(&apos;two&apos;);</span><br><span class="line">        &#125;, useCapture);</span><br><span class="line">        three.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">            console.log(&apos;three&apos;);</span><br><span class="line">        &#125;, useCapture);</span><br><span class="line">        four.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">            console.log(&apos;four&apos;);</span><br><span class="line">        &#125;, useCapture);     </span><br><span class="line"></span><br><span class="line">        /*</span><br><span class="line">        false</span><br><span class="line">            冒泡</span><br><span class="line">            点击four div</span><br><span class="line">            输出结果：four three two one        </span><br><span class="line"></span><br><span class="line">        true</span><br><span class="line">        捕获</span><br><span class="line">            点击four div</span><br><span class="line">            输出结果： one two three four</span><br><span class="line">       */</span><br><span class="line">   &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/ES6面向对象学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1679,149 +1845,6 @@ alert(typeof age); //undefined
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/web前端学习之javascript-DOM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LF">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fengziya*">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/15/web前端学习之javascript-DOM/" itemprop="url">web前端学习js-DOM</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T19:28:42+08:00">
-                2018-05-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。"><a href="#DOM是“Document-Object-Model”-文档对象模型-的首字母缩写。" class="headerlink" title="DOM是“Document Object Model”(文档对象模型)的首字母缩写。"></a>DOM是“Document Object Model”(文档对象模型)的首字母缩写。</h4><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><h4 id="元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】"><a href="#元素节点（element-node）：是DOM的原子。如：文本段落元素的名字p-无序清单元素的名字ul…-【nodeType的属性值是1】" class="headerlink" title="元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】"></a>元素节点（element node）：是DOM的原子。如：文本段落元素的名字p 无序清单元素的名字ul… 【nodeType的属性值是1】</h4><h4 id="文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"><a href="#文本节点（text-node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】" class="headerlink" title="文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】"></a>文本节点（text node）：文本节点总是包含在元素节点的内部。【nodeType的属性值是3】</h4><h4 id="属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】"><a href="#属性节点（attribute-node）：属性节点总是被放在起始标签里。如：title-”a-gentle-reminder”【nodeType的属性值是2】" class="headerlink" title="属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】"></a>属性节点（attribute node）：属性节点总是被放在起始标签里。如：title=”a gentle reminder”【nodeType的属性值是2】</h4><hr>
-<h4 id="getElementById-方法-返回的是对象"><a href="#getElementById-方法-返回的是对象" class="headerlink" title="getElementById()方法 返回的是对象"></a>getElementById()方法 返回的是对象</h4><h5 id="document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”"><a href="#document-getElementById-id-id必须放在单引号或双引号里-如-：document-getElementById-“purchases”" class="headerlink" title="document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)"></a>document.getElementById(id) id必须放在单引号或双引号里 如 ：document.getElementById(“purchases”)</h5><h4 id="getElementsByTagName-方法-返回的是对象数组"><a href="#getElementsByTagName-方法-返回的是对象数组" class="headerlink" title="getElementsByTagName()方法 返回的是对象数组"></a>getElementsByTagName()方法 返回的是对象数组</h4><h5 id="getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”"><a href="#getElementsByTagName-tag-tag必须是-x-html-标签的名字，并放在双引号里-如：document-getElementsByTagName-“li”" class="headerlink" title="getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)"></a>getElementsByTagName(tag) tag必须是(x)html 标签的名字，并放在双引号里 如：document.getElementsByTagName(“li”)</h5><h4 id="getAttribute-方法-查询属性-通过具体的对象调用"><a href="#getAttribute-方法-查询属性-通过具体的对象调用" class="headerlink" title="getAttribute()方法 查询属性 通过具体的对象调用"></a>getAttribute()方法 查询属性 通过具体的对象调用</h4><h5 id="object-getAttribute-attribute"><a href="#object-getAttribute-attribute" class="headerlink" title="object.getAttribute(attribute)"></a>object.getAttribute(attribute)</h5><h4 id="setAttribute-方法-设置属性"><a href="#setAttribute-方法-设置属性" class="headerlink" title="setAttribute()方法 设置属性"></a>setAttribute()方法 设置属性</h4><h5 id="object-setAttribute-attribute-value"><a href="#object-setAttribute-attribute-value" class="headerlink" title="object.setAttribute(attribute,value)"></a>object.setAttribute(attribute,value)</h5><hr>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1876,7 +1899,7 @@ alert(typeof age); //undefined
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
