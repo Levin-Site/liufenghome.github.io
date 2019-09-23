@@ -345,6 +345,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -374,7 +396,11 @@
       
         
           
-            
+            <h2 id="Koa2中间价使用日志"><a href="#Koa2中间价使用日志" class="headerlink" title="Koa2中间价使用日志"></a>Koa2中间价使用日志</h2><h3 id="1、洋葱圈模型"><a href="#1、洋葱圈模型" class="headerlink" title="1、洋葱圈模型"></a>1、洋葱圈模型</h3><p>洋葱圈模型，每个环都是一个中间件，且同一数据会经过同一中间件两次（request,reponse），可以保证中间件引用顺序与代码顺序不一致。<br><img src="https://raw.githubusercontent.com/liufenghome/markdownpictures/master/%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%8E%9F%E7%90%86%E5%9B%BE%E7%A4%BA.png" alt=""></p>
+<h3 id="2、Koa2使用中间件解释洋葱圈模型"><a href="#2、Koa2使用中间件解释洋葱圈模型" class="headerlink" title="2、Koa2使用中间件解释洋葱圈模型"></a>2、Koa2使用中间件解释洋葱圈模型</h3><p>在根目录下，创建middleware文件夹，然后创建m1,m2<br>,m3三个文件，m1文件内容如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">m1</span>(<span class="params">ctx</span>) </span>&#123;    <span class="comment">/*ctx对象，维持进入app的request，和出去的response两方面的信息，保证两方都被中间件所引用*/</span></span><br><span class="line">  global.console.log(<span class="string">'m1'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params">ctx,next</span>)</span>&#123;</span><br><span class="line">    global.console.log(<span class="string">'m1 start'</span>)</span><br><span class="line">    m1(ctx)</span><br><span class="line">    <span class="keyword">await</span> next()  <span class="comment">/*很关键的一步，等待此中间件完成，在完成之后将之提交到下一个中间件*/</span> </span><br><span class="line">    global.console.log(<span class="string">'m1 end'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在app.js文件中添加如下信息<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m1 = <span class="built_in">require</span>(<span class="string">'./middleware/m1'</span>)</span><br><span class="line"><span class="keyword">const</span> m2 = <span class="built_in">require</span>(<span class="string">'./middleware/m2'</span>)</span><br><span class="line"><span class="keyword">const</span> m3 = <span class="built_in">require</span>(<span class="string">'./middleware/m3'</span>)</span><br><span class="line"></span><br><span class="line">app.use(m1())  <span class="comment">/*执行中间件的方式*/</span></span><br><span class="line">app.use(m2())</span><br><span class="line">app.use(m3())</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/liufenghome/markdownpictures/master/%E4%B8%AD%E9%97%B4%E4%BB%B6.png" alt=""><br>由此图可看出中间件即为洋葱圈模型（依次执行了m1,m2,m3），且都执行了两次。</p>
+
           
         
       
