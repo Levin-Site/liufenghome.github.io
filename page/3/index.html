@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="学习前端的小菜鸟">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fengziya*">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="Fengziya*">
+<meta property="og:description" content="学习前端的小菜鸟">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fengziya*">
+<meta name="twitter:description" content="学习前端的小菜鸟">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '心上狗在这里'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/3/"/>
+
+
+
+
+
+  <title>Fengziya*</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+    <a href="https://github.com/liufenghome"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fengziya*</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于博主
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-categories"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/something" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            something
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/28/windows下实现ubuntu环境的几种方式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LF">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fengziya*">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/28/windows下实现ubuntu环境的几种方式/" itemprop="url">windows下实现ubuntu环境的几种方式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-28T12:00:41+08:00">
+                2018-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搭建linxu系统/" itemprop="url" rel="index">
+                    <span itemprop="name">搭建linxu系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="windows下实现ubuntu环境的几种方式"><a href="#windows下实现ubuntu环境的几种方式" class="headerlink" title="windows下实现ubuntu环境的几种方式"></a>windows下实现ubuntu环境的几种方式</h3><h4 id="1、ubuntu-on-windows这是一种比较新颖的方式实现ubuntu环境的搭建，首先你的电脑得是win10最新版的系统，然后在程序与功能中点击启用或关闭windos功能，然后再将适用Linxu的子系统这一选项打钩就可以，之后直接在应用商店下载安装ubuntu即可，下载完成后，输入“bash”-（没有引号），然后回车，会打开一个-cmd-exe-窗口运行-Ubuntu-的-bin-bash。你可以完全访问所有的-Ubuntu-用户空间了没错，这包括-apt、-ssh、-rsync、-find、-grep、-awk、-sed、-sort、-xargs、-md5sum、-gpg、-curl、-wget、apache、-mysql、-python、-perl、-ruby、-php、-gcc、-tar、-vim、-emacs、-diff、-patch-等等以及，Ubuntu-软件库中数以万计的-ELF-二进制程序中的绝大多数！"><a href="#1、ubuntu-on-windows这是一种比较新颖的方式实现ubuntu环境的搭建，首先你的电脑得是win10最新版的系统，然后在程序与功能中点击启用或关闭windos功能，然后再将适用Linxu的子系统这一选项打钩就可以，之后直接在应用商店下载安装ubuntu即可，下载完成后，输入“bash”-（没有引号），然后回车，会打开一个-cmd-exe-窗口运行-Ubuntu-的-bin-bash。你可以完全访问所有的-Ubuntu-用户空间了没错，这包括-apt、-ssh、-rsync、-find、-grep、-awk、-sed、-sort、-xargs、-md5sum、-gpg、-curl、-wget、apache、-mysql、-python、-perl、-ruby、-php、-gcc、-tar、-vim、-emacs、-diff、-patch-等等以及，Ubuntu-软件库中数以万计的-ELF-二进制程序中的绝大多数！" class="headerlink" title="1、ubuntu on windows这是一种比较新颖的方式实现ubuntu环境的搭建，首先你的电脑得是win10最新版的系统，然后在程序与功能中点击启用或关闭windos功能，然后再将适用Linxu的子系统这一选项打钩就可以，之后直接在应用商店下载安装ubuntu即可，下载完成后，输入“bash” （没有引号），然后回车，会打开一个 cmd.exe 窗口运行 Ubuntu 的 /bin/bash。你可以完全访问所有的 Ubuntu 用户空间了没错，这包括  apt、 ssh、 rsync、 find、 grep、 awk、 sed、 sort、 xargs、 md5sum、 gpg、 curl、 wget、apache、 mysql、 python、 perl、 ruby、 php、 gcc、 tar、 vim、 emacs、 diff、 patch 等等以及，Ubuntu 软件库中数以万计的 ELF 二进制程序中的绝大多数！"></a>1、ubuntu on windows这是一种比较新颖的方式实现ubuntu环境的搭建，首先你的电脑得是win10最新版的系统，然后在程序与功能中点击启用或关闭windos功能，然后再将适用Linxu的子系统这一选项打钩就可以，之后直接在应用商店下载安装ubuntu即可，下载完成后，输入“bash” （没有引号），然后回车，会打开一个 cmd.exe 窗口运行 Ubuntu 的 /bin/bash。你可以完全访问所有的 Ubuntu 用户空间了没错，这包括  apt、 ssh、 rsync、 find、 grep、 awk、 sed、 sort、 xargs、 md5sum、 gpg、 curl、 wget、apache、 mysql、 python、 perl、 ruby、 php、 gcc、 tar、 vim、 emacs、 diff、 patch 等等以及，Ubuntu 软件库中数以万计的 ELF 二进制程序中的绝大多数！</h4><h4 id="2、使用虚拟机搭建ubuntu环境-这种方式就不多介绍了，原理就是下载VMware-Workstation-Pro软件来构建虚拟机，在虚拟机上安装ubuntu系统，以此实现在windows系统上体验使用ubuntu的效果。"><a href="#2、使用虚拟机搭建ubuntu环境-这种方式就不多介绍了，原理就是下载VMware-Workstation-Pro软件来构建虚拟机，在虚拟机上安装ubuntu系统，以此实现在windows系统上体验使用ubuntu的效果。" class="headerlink" title="2、使用虚拟机搭建ubuntu环境 这种方式就不多介绍了，原理就是下载VMware Workstation Pro软件来构建虚拟机，在虚拟机上安装ubuntu系统，以此实现在windows系统上体验使用ubuntu的效果。"></a>2、使用虚拟机搭建ubuntu环境 这种方式就不多介绍了，原理就是下载VMware Workstation Pro软件来构建虚拟机，在虚拟机上安装ubuntu系统，以此实现在windows系统上体验使用ubuntu的效果。</h4><h4 id="3、Docker容器中运行ubuntu系统这种方式其实与通过虚拟机实现ubuntu系统相差无几，但其与虚拟机的区别是虚拟机里装的ubuntu是ubuntu的内核-ubuntu的文件系统，而docker里的ubuntu是任意的内核（你底层的操作系统的内核）-ubuntu的文件系统。容器和虚机是不同的虚拟化技术，容器是对文件系统，网络，进程等空间的隔离，让其表现起来像是一个单独的操作系统。而实际同一台宿主机上的所有容器都是共享同一个底层的真实操作系统，只是不同容器镜像的文件系统不一样。打个比方，宿主机是centos-一个容器ubuntu-一个容器是centos，两个容器共享宿主机centos的系统，但ubuntu的容器里有ubuntu的系统文件，lib库，等等。容器启动的时候不用经过常规的系统初始化过程，所以可以达到妙级启动。（转自知乎）"><a href="#3、Docker容器中运行ubuntu系统这种方式其实与通过虚拟机实现ubuntu系统相差无几，但其与虚拟机的区别是虚拟机里装的ubuntu是ubuntu的内核-ubuntu的文件系统，而docker里的ubuntu是任意的内核（你底层的操作系统的内核）-ubuntu的文件系统。容器和虚机是不同的虚拟化技术，容器是对文件系统，网络，进程等空间的隔离，让其表现起来像是一个单独的操作系统。而实际同一台宿主机上的所有容器都是共享同一个底层的真实操作系统，只是不同容器镜像的文件系统不一样。打个比方，宿主机是centos-一个容器ubuntu-一个容器是centos，两个容器共享宿主机centos的系统，但ubuntu的容器里有ubuntu的系统文件，lib库，等等。容器启动的时候不用经过常规的系统初始化过程，所以可以达到妙级启动。（转自知乎）" class="headerlink" title="3、Docker容器中运行ubuntu系统这种方式其实与通过虚拟机实现ubuntu系统相差无几，但其与虚拟机的区别是虚拟机里装的ubuntu是ubuntu的内核 +ubuntu的文件系统，而docker里的ubuntu是任意的内核（你底层的操作系统的内核）+ ubuntu的文件系统。容器和虚机是不同的虚拟化技术，容器是对文件系统，网络，进程等空间的隔离，让其表现起来像是一个单独的操作系统。而实际同一台宿主机上的所有容器都是共享同一个底层的真实操作系统，只是不同容器镜像的文件系统不一样。打个比方，宿主机是centos,一个容器ubuntu, 一个容器是centos，两个容器共享宿主机centos的系统，但ubuntu的容器里有ubuntu的系统文件，lib库，等等。容器启动的时候不用经过常规的系统初始化过程，所以可以达到妙级启动。（转自知乎）"></a>3、Docker容器中运行ubuntu系统这种方式其实与通过虚拟机实现ubuntu系统相差无几，但其与虚拟机的区别是虚拟机里装的ubuntu是ubuntu的内核 +ubuntu的文件系统，而docker里的ubuntu是任意的内核（你底层的操作系统的内核）+ ubuntu的文件系统。容器和虚机是不同的虚拟化技术，容器是对文件系统，网络，进程等空间的隔离，让其表现起来像是一个单独的操作系统。而实际同一台宿主机上的所有容器都是共享同一个底层的真实操作系统，只是不同容器镜像的文件系统不一样。打个比方，宿主机是centos,一个容器ubuntu, 一个容器是centos，两个容器共享宿主机centos的系统，但ubuntu的容器里有ubuntu的系统文件，lib库，等等。容器启动的时候不用经过常规的系统初始化过程，所以可以达到妙级启动。（转自知乎）</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/如何利用github上传你的个人网站/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LF">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fengziya*">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/27/如何利用github上传你的个人网站/" itemprop="url">如何利用github上传你的个人网站</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T20:43:36+08:00">
+                2018-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
+                    <span itemprop="name">搭建博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="github是一个功能强大的代码托管工具，shiyonggithub可以将你写好的网站项目在网上托管，并供人浏览，下面就是具体上传个人网站的步骤。"><a href="#github是一个功能强大的代码托管工具，shiyonggithub可以将你写好的网站项目在网上托管，并供人浏览，下面就是具体上传个人网站的步骤。" class="headerlink" title="github是一个功能强大的代码托管工具，shiyonggithub可以将你写好的网站项目在网上托管，并供人浏览，下面就是具体上传个人网站的步骤。"></a>github是一个功能强大的代码托管工具，shiyonggithub可以将你写好的网站项目在网上托管，并供人浏览，下面就是具体上传个人网站的步骤。</h3><hr>
+<h4 id="在GitHub上部署网站："><a href="#在GitHub上部署网站：" class="headerlink" title="在GitHub上部署网站："></a>在GitHub上部署网站：</h4><h5 id="第一步：单击Repositories，其中Repositories在GitHub上表示的是仓库，在GitHub上每个项目都存放在仓库里，一个仓库保存一个项目。"><a href="#第一步：单击Repositories，其中Repositories在GitHub上表示的是仓库，在GitHub上每个项目都存放在仓库里，一个仓库保存一个项目。" class="headerlink" title="第一步：单击Repositories，其中Repositories在GitHub上表示的是仓库，在GitHub上每个项目都存放在仓库里，一个仓库保存一个项目。"></a>第一步：单击Repositories，其中Repositories在GitHub上表示的是仓库，在GitHub上每个项目都存放在仓库里，一个仓库保存一个项目。</h5><h5 id="第二步：单击New按钮。"><a href="#第二步：单击New按钮。" class="headerlink" title="第二步：单击New按钮。"></a>第二步：单击New按钮。</h5><h5 id="第三步：填写信息，信息填写完成后单击Create-respository按钮创建仓库。"><a href="#第三步：填写信息，信息填写完成后单击Create-respository按钮创建仓库。" class="headerlink" title="第三步：填写信息，信息填写完成后单击Create respository按钮创建仓库。"></a>第三步：填写信息，信息填写完成后单击Create respository按钮创建仓库。</h5><h5 id="第四步：单击创建好仓库后会自动跳转到下个界面，在界面中单击Settings。"><a href="#第四步：单击创建好仓库后会自动跳转到下个界面，在界面中单击Settings。" class="headerlink" title="第四步：单击创建好仓库后会自动跳转到下个界面，在界面中单击Settings。"></a>第四步：单击创建好仓库后会自动跳转到下个界面，在界面中单击Settings。</h5><h5 id="第五步：进入设置界面后一直往下，找到GitHub-Page-并且单击GitHub-Page模块中的Choose-them按钮创建一个网站的主题。选择Cayman主题，然后单击select-theme按钮，然后点击Commit-changes按钮。"><a href="#第五步：进入设置界面后一直往下，找到GitHub-Page-并且单击GitHub-Page模块中的Choose-them按钮创建一个网站的主题。选择Cayman主题，然后单击select-theme按钮，然后点击Commit-changes按钮。" class="headerlink" title="第五步：进入设置界面后一直往下，找到GitHub Page,并且单击GitHub Page模块中的Choose them按钮创建一个网站的主题。选择Cayman主题，然后单击select theme按钮，然后点击Commit changes按钮。"></a>第五步：进入设置界面后一直往下，找到GitHub Page,并且单击GitHub Page模块中的Choose them按钮创建一个网站的主题。选择Cayman主题，然后单击select theme按钮，然后点击Commit changes按钮。</h5><h5 id="第六步：单击Commit-changes按钮后会自动跳转到我们创建的仓库界面，里面包含了仓库的各种信息，其中master表示这个仓库位于master分之上，进入界面后单击Settings按钮。"><a href="#第六步：单击Commit-changes按钮后会自动跳转到我们创建的仓库界面，里面包含了仓库的各种信息，其中master表示这个仓库位于master分之上，进入界面后单击Settings按钮。" class="headerlink" title="第六步：单击Commit changes按钮后会自动跳转到我们创建的仓库界面，里面包含了仓库的各种信息，其中master表示这个仓库位于master分之上，进入界面后单击Settings按钮。"></a>第六步：单击Commit changes按钮后会自动跳转到我们创建的仓库界面，里面包含了仓库的各种信息，其中master表示这个仓库位于master分之上，进入界面后单击Settings按钮。</h5><h5 id="第七步：在Settings界面中往下滑，滑到GitHub-Page模块，可以看到GitHub-Page模块中多了一个网址，在浏览器中打开网址后可以看到网页上呈现出的内容就是我们刚刚创建的主题为Cayman的网页。"><a href="#第七步：在Settings界面中往下滑，滑到GitHub-Page模块，可以看到GitHub-Page模块中多了一个网址，在浏览器中打开网址后可以看到网页上呈现出的内容就是我们刚刚创建的主题为Cayman的网页。" class="headerlink" title="第七步：在Settings界面中往下滑，滑到GitHub Page模块，可以看到GitHub Page模块中多了一个网址，在浏览器中打开网址后可以看到网页上呈现出的内容就是我们刚刚创建的主题为Cayman的网页。"></a>第七步：在Settings界面中往下滑，滑到GitHub Page模块，可以看到GitHub Page模块中多了一个网址，在浏览器中打开网址后可以看到网页上呈现出的内容就是我们刚刚创建的主题为Cayman的网页。</h5><h5 id="第八步：回到GitHub上并且打开我们刚刚创建的那个仓库，仓库里的文件就是刚刚在浏览器中显示的内容，接下来要做的事情就是修改仓库里的文件，单击Clone-ordownload按钮。单击复制到剪切板按钮，复制仓库的url-。"><a href="#第八步：回到GitHub上并且打开我们刚刚创建的那个仓库，仓库里的文件就是刚刚在浏览器中显示的内容，接下来要做的事情就是修改仓库里的文件，单击Clone-ordownload按钮。单击复制到剪切板按钮，复制仓库的url-。" class="headerlink" title="第八步：回到GitHub上并且打开我们刚刚创建的那个仓库，仓库里的文件就是刚刚在浏览器中显示的内容，接下来要做的事情就是修改仓库里的文件，单击Clone ordownload按钮。单击复制到剪切板按钮，复制仓库的url 。"></a>第八步：回到GitHub上并且打开我们刚刚创建的那个仓库，仓库里的文件就是刚刚在浏览器中显示的内容，接下来要做的事情就是修改仓库里的文件，单击Clone ordownload按钮。单击复制到剪切板按钮，复制仓库的url 。</h5><h5 id="第九步：然后使用git工具，首先在你的电脑上新建一个用来上传网站的文件夹，可以随意命名，在中点击git-bash-here执行git-clone命令，然后就可以看到多了一个名为你仓库名的文件夹，将网站文件复制到此文件夹中，打开命令行进入仓库名文件夹，并执行git-commit-m-“first-commit-”，执行-git-push-origin-master命令，将文件push到GitHub上的master分支上。"><a href="#第九步：然后使用git工具，首先在你的电脑上新建一个用来上传网站的文件夹，可以随意命名，在中点击git-bash-here执行git-clone命令，然后就可以看到多了一个名为你仓库名的文件夹，将网站文件复制到此文件夹中，打开命令行进入仓库名文件夹，并执行git-commit-m-“first-commit-”，执行-git-push-origin-master命令，将文件push到GitHub上的master分支上。" class="headerlink" title="第九步：然后使用git工具，首先在你的电脑上新建一个用来上传网站的文件夹，可以随意命名，在中点击git bash here执行git clone命令，然后就可以看到多了一个名为你仓库名的文件夹，将网站文件复制到此文件夹中，打开命令行进入仓库名文件夹，并执行git commit -m “first commit .”，执行 git push origin master命令，将文件push到GitHub上的master分支上。"></a>第九步：然后使用git工具，首先在你的电脑上新建一个用来上传网站的文件夹，可以随意命名，在中点击git bash here执行git clone命令，然后就可以看到多了一个名为你仓库名的文件夹，将网站文件复制到此文件夹中，打开命令行进入仓库名文件夹，并执行git commit -m “first commit .”，执行 git push origin master命令，将文件push到GitHub上的master分支上。</h5><h5 id="第十步：回到Github上的boyaa仓库，可以看到文件已经全部提交上来了。"><a href="#第十步：回到Github上的boyaa仓库，可以看到文件已经全部提交上来了。" class="headerlink" title="第十步：回到Github上的boyaa仓库，可以看到文件已经全部提交上来了。"></a>第十步：回到Github上的boyaa仓库，可以看到文件已经全部提交上来了。</h5><h5 id="第十一步：再次打开位于Settings下，GitHub-Page模块中的网址，可以看到网页变成了我们修改后的页面。"><a href="#第十一步：再次打开位于Settings下，GitHub-Page模块中的网址，可以看到网页变成了我们修改后的页面。" class="headerlink" title="第十一步：再次打开位于Settings下，GitHub Page模块中的网址，可以看到网页变成了我们修改后的页面。"></a>第十一步：再次打开位于Settings下，GitHub Page模块中的网址，可以看到网页变成了我们修改后的页面。</h5><h5 id="第十二步：通过观察网址可知，网址的格式为-https-GitHub的用户名-github-io-仓库的名称。"><a href="#第十二步：通过观察网址可知，网址的格式为-https-GitHub的用户名-github-io-仓库的名称。" class="headerlink" title="第十二步：通过观察网址可知，网址的格式为 https:// + GitHub的用户名 + .github.io/ + 仓库的名称。"></a>第十二步：通过观察网址可知，网址的格式为 https:// + GitHub的用户名 + .github.io/ + 仓库的名称。</h5>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="LF" />
+            
+              <p class="site-author-name" itemprop="name">LF</p>
+              <p class="site-description motion-element" itemprop="description">学习前端的小菜鸟</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LF</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 hexo 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<script type="text/javascript" src="/js/src/love.js"></script>

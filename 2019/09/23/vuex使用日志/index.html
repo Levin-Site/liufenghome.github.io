@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子：ES5写法123456789101112131415161718192021222324// ES5实现面向对象继承function User(name,age)&amp;#123;	this.name=name;	this.age">
+<meta name="description" content="Vuex使用日志1、什么是Vuex vuex是一个专门为vue.js应用程序开发的状态管理模式，简单来说就是当多个组件共用一份数据时就会用到vuex。 图解每一个Vuex应用包含四大部分，即Vue Components，Actions，Mutations，State，其中核心是 store（仓库）。“store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。Vue Compo">
 <meta name="keywords" content="hexo,github,npm,js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6面向对象学习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/04/16/ES6面向对象学习笔记/index.html">
+<meta property="og:title" content="vuex使用日志">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/vuex使用日志/index.html">
 <meta property="og:site_name" content="Fengziya*">
-<meta property="og:description" content="在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子：ES5写法123456789101112131415161718192021222324// ES5实现面向对象继承function User(name,age)&amp;#123;	this.name=name;	this.age">
+<meta property="og:description" content="Vuex使用日志1、什么是Vuex vuex是一个专门为vue.js应用程序开发的状态管理模式，简单来说就是当多个组件共用一份数据时就会用到vuex。 图解每一个Vuex应用包含四大部分，即Vue Components，Actions，Mutations，State，其中核心是 store（仓库）。“store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。Vue Compo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-19T13:51:35.973Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/liufenghome/markdownpictures/master/vuex.png">
+<meta property="og:updated_time" content="2019-09-23T13:27:17.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6面向对象学习笔记">
-<meta name="twitter:description" content="在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子：ES5写法123456789101112131415161718192021222324// ES5实现面向对象继承function User(name,age)&amp;#123;	this.name=name;	this.age">
+<meta name="twitter:title" content="vuex使用日志">
+<meta name="twitter:description" content="Vuex使用日志1、什么是Vuex vuex是一个专门为vue.js应用程序开发的状态管理模式，简单来说就是当多个组件共用一份数据时就会用到vuex。 图解每一个Vuex应用包含四大部分，即Vue Components，Actions，Mutations，State，其中核心是 store（仓库）。“store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。Vue Compo">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/liufenghome/markdownpictures/master/vuex.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/16/ES6面向对象学习笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/09/23/vuex使用日志/"/>
 
 
 
 
 
-  <title>ES6面向对象学习笔记 | Fengziya*</title>
+  <title>vuex使用日志 | Fengziya*</title>
   
 
 
@@ -304,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/ES6面向对象学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/vuex使用日志/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LF">
@@ -321,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ES6面向对象学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">vuex使用日志</h1>
         
 
         <div class="post-meta">
@@ -333,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T17:31:33+08:00">
-                2019-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-23T20:19:56+08:00">
+                2019-09-23
               </time>
             
 
@@ -393,10 +395,15 @@
       
 
       
-        <h3 id="在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子："><a href="#在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子：" class="headerlink" title="在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子："></a>在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子：</h3><h4 id="ES5写法"><a href="#ES5写法" class="headerlink" title="ES5写法"></a>ES5写法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// ES5实现面向对象继承</span><br><span class="line">function User(name,age)&#123;</span><br><span class="line">	this.name=name;</span><br><span class="line">	this.age=age;</span><br><span class="line">&#125;</span><br><span class="line">User.prototype.showAge=function()&#123;</span><br><span class="line">	alert(this.age);</span><br><span class="line">&#125;</span><br><span class="line">User.prototype.showName=function()&#123;</span><br><span class="line">	alert(this.name);</span><br><span class="line">&#125;</span><br><span class="line">function VipUser(name,age,level)&#123;</span><br><span class="line">	User.call(this,name,age);</span><br><span class="line">	this.level=level;</span><br><span class="line">&#125;</span><br><span class="line">VipUser.prototype=new User();</span><br><span class="line">VipUser.prototype.constructor=VipUser;</span><br><span class="line">VipUser.prototype.showLevel=function()&#123;</span><br><span class="line">	alert(this.level);</span><br><span class="line">&#125;</span><br><span class="line">let a = new VipUser(&apos;小明&apos;,18,18);</span><br><span class="line">a.showName();</span><br><span class="line">a.showAge();</span><br><span class="line">a.showLevel();</span><br></pre></td></tr></table></figure>
-<h4 id="ES6写法"><a href="#ES6写法" class="headerlink" title="ES6写法"></a>ES6写法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//ES6实现面向对象继承</span><br><span class="line">class User&#123;</span><br><span class="line">	constructor(name,age)&#123;</span><br><span class="line">		this.name=name;</span><br><span class="line">		this.age=age;</span><br><span class="line">	&#125;</span><br><span class="line">	showName()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">	showAge()&#123;</span><br><span class="line">		alert(this.age);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class VipUser extends User&#123;</span><br><span class="line">	constructor(name,age,level)&#123;</span><br><span class="line">		super(name,age);</span><br><span class="line">		this.level=level;</span><br><span class="line">	&#125;</span><br><span class="line">	showLevel()&#123;</span><br><span class="line">		alert(this.level);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">let a = new VipUser(&apos;刘峰&apos;,21,21);</span><br><span class="line">a.showName();</span><br><span class="line">a.showAge();</span><br><span class="line">a.showLevel();</span><br></pre></td></tr></table></figure>
-<h4 id="由此对比就会明白ES6写法更接近面向对象的语言，也更能让人理解。"><a href="#由此对比就会明白ES6写法更接近面向对象的语言，也更能让人理解。" class="headerlink" title="由此对比就会明白ES6写法更接近面向对象的语言，也更能让人理解。"></a>由此对比就会明白ES6写法更接近面向对象的语言，也更能让人理解。</h4><hr>
-
+        <h1 id="Vuex使用日志"><a href="#Vuex使用日志" class="headerlink" title="Vuex使用日志"></a>Vuex使用日志</h1><h2 id="1、什么是Vuex"><a href="#1、什么是Vuex" class="headerlink" title="1、什么是Vuex"></a>1、什么是Vuex</h2><ul>
+<li>vuex是一个专门为vue.js应用程序开发的状态管理模式，简单来说就是当多个组件共用一份数据时就会用到vuex。</li>
+<li>图解<br><img src="https://raw.githubusercontent.com/liufenghome/markdownpictures/master/vuex.png" alt=""><br>每一个Vuex应用包含四大部分，即Vue Components，Actions，Mutations，<br>State，其中核心是 store（仓库）。“store”基本上就是一个容器，它包含着你的应用中大部分的状态 (state)。<br>Vue Components接收用户行为提交至Actions，然后Actions进一步提交commit（所带参数即为Mutations中的函数），<br>Mutations接收commit，修改State里面的数据，然后State将数据变化反馈给Vue Components组件。<br>总结来说，数据在State中，数据如何改变由Mutations来决定（比如自增，自减），控制Mutations做改变数据的行为由Actions来决定（必须提交commit）。</li>
+</ul>
+<h2 id="2、使用实例"><a href="#2、使用实例" class="headerlink" title="2、使用实例"></a>2、使用实例</h2><h3 id="2-1、安装"><a href="#2-1、安装" class="headerlink" title="2.1、安装"></a>2.1、安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vuex</span><br></pre></td></tr></table></figure>
+<h3 id="2-2、在vue项目src目录下创建store-js"><a href="#2-2、在vue项目src目录下创建store-js" class="headerlink" title="2.2、在vue项目src目录下创建store.js"></a>2.2、在vue项目src目录下创建store.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">  count: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">    <span class="comment">//count实现自增</span></span><br><span class="line">  increment(state)&#123;</span><br><span class="line">    state.count++</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//count实现自减</span></span><br><span class="line">  decrement(state)&#123;</span><br><span class="line">    state.count--</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line">  increment: <span class="function">(<span class="params">&#123;commit&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    commit(<span class="string">'increment'</span>)  <span class="comment">/*actions向mutations提交commit*/</span></span><br><span class="line">  &#125;,</span><br><span class="line">  decrement: <span class="function">(<span class="params">&#123;commit&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    commit(<span class="string">'decrement'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*模块导出*/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;state, mutations, actions&#125;) <span class="comment">/*Store必须大写*/</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-3、在components文件夹里创建vuex-vue组件"><a href="#2-3、在components文件夹里创建vuex-vue组件" class="headerlink" title="2.3、在components文件夹里创建vuex.vue组件"></a>2.3、在components文件夹里创建vuex.vue组件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template lang=<span class="string">"html"</span>&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"vuex"</span>&gt;</span><br><span class="line">    vuex &#123;&#123; $store.state.count &#125;&#125; <span class="comment">//调用store中state里的count</span></span><br><span class="line">    &lt;button name=<span class="string">"button"</span> type=<span class="string">"button"</span> @click=<span class="string">"increment"</span>&gt;增加&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button name="button" type="button" @click="decrement"&gt;增加&lt;/</span>button&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> &#123;mapActions&#125; <span class="keyword">from</span> <span class="string">'vuex'</span> <span class="comment">//导入mapAction函数</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="comment">//使用mapActions辅助函数将组件的methods映射为store.dispatch调用（需要先在根节点注入store）</span></span><br><span class="line">    methods: mapActions([</span><br><span class="line">      <span class="string">'increment'</span>,</span><br><span class="line">      <span class="string">'decrement'</span></span><br><span class="line">    ])</span><br><span class="line">  &#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;style lang="css"&gt;&lt;/</span>style&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-4、在入口文件中导入store"><a href="#2-4、在入口文件中导入store" class="headerlink" title="2.4、在入口文件中导入store"></a>2.4、在入口文件中导入store</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span>  <span class="string">'./App.vue'</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">  store</span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="2-5、在App-vue中导入vuex组件"><a href="#2-5、在App-vue中导入vuex组件" class="headerlink" title="2.5、在App.vue中导入vuex组件"></a>2.5、在App.vue中导入vuex组件</h3>
       
     </div>
     
@@ -432,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/07/var和let的区别/" rel="next" title="var和let的区别举例">
-                <i class="fa fa-chevron-left"></i> var和let的区别举例
+              <a href="/2019/09/22/Vue使用路由总结/" rel="next" title="Vue使用路由总结">
+                <i class="fa fa-chevron-left"></i> Vue使用路由总结
               </a>
             
           </div>
@@ -442,8 +449,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/21/对js中event（事件对象）的理解/" rel="prev" title="对js中event（事件对象）的理解">
-                对js中event（事件对象）的理解 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/23/async-await异步方式初次使用/" rel="prev" title="async await异步方式初次使用">
+                async await异步方式初次使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -580,7 +587,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子："><span class="nav-number">1.</span> <span class="nav-text">在ES6之前，js虽然也有面向对象的方法，但实现起来都特别繁琐，ES6借鉴了java面向对象方法的优点，成功简化了面向对象的方法，下面是我学到的ES6面向对象中继承的一个例子：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ES5写法"><span class="nav-number">1.1.</span> <span class="nav-text">ES5写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6写法"><span class="nav-number">1.2.</span> <span class="nav-text">ES6写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#由此对比就会明白ES6写法更接近面向对象的语言，也更能让人理解。"><span class="nav-number">1.3.</span> <span class="nav-text">由此对比就会明白ES6写法更接近面向对象的语言，也更能让人理解。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vuex使用日志"><span class="nav-number">1.</span> <span class="nav-text">Vuex使用日志</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、什么是Vuex"><span class="nav-number">1.1.</span> <span class="nav-text">1、什么是Vuex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、使用实例"><span class="nav-number">1.2.</span> <span class="nav-text">2、使用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、安装"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、在vue项目src目录下创建store-js"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2、在vue项目src目录下创建store.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3、在components文件夹里创建vuex-vue组件"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3、在components文件夹里创建vuex.vue组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4、在入口文件中导入store"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4、在入口文件中导入store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5、在App-vue中导入vuex组件"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5、在App.vue中导入vuex组件</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
